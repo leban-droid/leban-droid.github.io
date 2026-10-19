@@ -1,11 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <title>我的网站</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公司名称 - 官网首页</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
-<body>
-  <h1>你好，这是我的网站</h1>我已经添加上输入法了我真聪明。 
-  <p>这是我的第一个 GitHub Pages 页面。</p>这是我的第二个页面但是我不知道该怎么换页
+<body class="bg-white text-gray-800">
+
+  <!-- 1. 导航栏 -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-blue-700">公司LOGO</div>
+      <div class="hidden md:flex gap-8 text-gray-600">
+        <a href="#home" class="hover:text-blue-600">首页</a>
+        <a href="#about" class="hover:text-blue-600">关于我们</a>
+        <a href="#products" class="hover:text-blue-600">产品服务</a>
+        <a href="#contact" class="hover:text-blue-600">联系我们</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. Hero Banner 首屏 -->
+  <section id="home" class="pt-32 pb-24 bg-gradient-to-br from-blue-700 to-blue-900 text-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">一句话说清你公司做什么</h1>
+      <p class="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+        这里写一段公司简介，告诉客户你是谁、解决什么问题、有什么优势。两到三句话就够了。
+      </p>
+      <div class="flex gap-4 justify-center">
+        <a href="#contact" class="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50">联系我们</a>
+        <a href="#products" class="border border-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10">查看产品</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 核心优势 -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">我们的优势</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-4">★</div>
+          <h3 class="text-xl font-semibold mb-3">专业技术</h3>
+          <p class="text-gray-600">描述你的技术优势、研发能力、团队经验等。</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-4">✓</div>
+          <h3 class="text-xl font-semibold mb-3">品质保障</h3>
+          <p class="text-gray-600">描述你的质量控制、认证资质、交付标准等。</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-4">☎</div>
+          <h3 class="text-xl font-semibold mb-3">售后服务</h3>
+          <p class="text-gray-600">描述你的响应速度、售后支持、客户服务等。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 产品/服务 -->
+  <section id="products" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">产品与服务</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="border rounded-xl overflow-hidden">
+          <div class="h-48 bg-gradient-to-br from-blue-200 to-blue-400"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">产品一名称</h3>
+            <p class="text-gray-600">产品简介，一句话说明这个产品的功能和特点。</p>
+          </div>
+        </div>
+        <div class="border rounded-xl overflow-hidden">
+          <div class="h-48 bg-gradient-to-br from-green-200 to-green-400"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">产品二名称</h3>
+            <p class="text-gray-600">产品简介，一句话说明这个产品的功能和特点。</p>
+          </div>
+        </div>
+        <div class="border rounded-xl overflow-hidden">
+          <div class="h-48 bg-gradient-to-br from-orange-200 to-orange-400"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">产品三名称</h3>
+            <p class="text-gray-600">产品简介，一句话说明这个产品的功能和特点。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 关于我们 / 数据 -->
+  <section id="about" class="py-20 bg-gray-900 text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold mb-6">关于我们</h2>
+          <p class="text-gray-300 mb-4">
+            这里写公司简介：成立时间、公司规模、主营业务、发展历程。
+          </p>
+          <p class="text-gray-300">
+            第二段可以写公司的使命愿景，或者核心价值观。
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-6 text-center">
+          <div class="bg-gray-800 p-6 rounded-xl">
+            <div class="text-3xl font-bold text-blue-400 mb-2">10+</div>
+            <div class="text-gray-400">年行业经验</div>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl">
+            <div class="text-3xl font-bold text-blue-400 mb-2">100+</div>
+            <div class="text-gray-400">合作客户</div>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl">
+            <div class="text-3xl font-bold text-blue-400 mb-2">50+</div>
+            <div class="text-gray-400">专业团队</div>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl">
+            <div class="text-3xl font-bold text-blue-400 mb-2">99%</div>
+            <div class="text-gray-400">客户满意度</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 联系我们 -->
+  <section id="contact" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">联系我们</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="p-6">
+          <div class="text-3xl mb-3">📞</div>
+          <h3 class="font-semibold mb-2">电话</h3>
+          <p class="text-gray-600">400-xxx-xxxx</p>
+        </div>
+        <div class="p-6">
+          <div class="text-3xl mb-3">📍</div>
+          <h3 class="font-semibold mb-2">地址</h3>
+          <p class="text-gray-600">xx省xx市xx区xx路xx号</p>
+        </div>
+        <div class="p-6">
+          <div class="text-3xl mb-3">✉️</div>
+          <h3 class="font-semibold mb-2">邮箱</h3>
+          <p class="text-gray-600">info@yourcompany.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. 页脚 -->
+  <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm">
+    <p>© 2026 公司名称 版权所有 | ICP备案号：xxxxxxxxx</p>
+  </footer>
+
 </body>
 </html>
